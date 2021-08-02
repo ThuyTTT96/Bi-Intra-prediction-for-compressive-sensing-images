@@ -1,0 +1,57 @@
+KL1p (v0.4.2) - A portable C++ compressed sensing library.
+
+====================================================================================================
+    KL1p Version History
+====================================================================================================
+
+
+----------------------------------------------------------------------------------------------------
+Version 0.1 - DEVELOPMENT
+----------------------------------------------------------------------------------------------------
+v0.1.0 - Base functionnalities, base operators, Fourier operators, Wavelet operators, ROMP solver.
+
+----------------------------------------------------------------------------------------------------
+Version 0.2 - NON-RELEASED
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Version 0.3 - DEVELOPMENT
+----------------------------------------------------------------------------------------------------
+v0.3.1 - CoSaMP solver.
+v0.3.2 - Subspace-Pursuit solver.
+v0.3.3 - AMP solver, Diagonal-Bernoulli operator, Permutation operator.
+v0.3.4 - SL0 solver + replace boost instances with klab instances.
+v0.3.5 - Walsh-Hadamard operator and DCT operator.
+v0.3.6 - BasisPursuit solver + ComplexProxy operator, Scalar operator and Diagonal operator.
+v0.3.7 - OMP solver.
+v0.3.8 - EMBP solver.
+v0.3.9 - Refactoring : Rename 'Transpose' to 'Adjoint' in every classes + column and columnAdjoint methods in TOperator and inherited-classes.
+v0.3.10 - BasisPursuit and EMBP improvements + Scaling and Normalization operator.
+v0.3.11 - Refactoring : Add m,n dimensions to operators, and remove size from column and columnAdjoints functions and from solve functions.
+v0.3.12 - Refactoring : TBitMaskMeasurementOperator to TSamplingOperator/TDownSamplingOperator (idem for TRandomBitMaskMeasurementOperator).
+	    - Refactoring : TPermutationOperator inherits from TSamplingOperator.
+        - Refactoring : TDiagonalBernoulliOperator to TRandomBernoulliDiagonalOperator.
+		- Refactoring : TGaussian1DOperator to TGaussian1DDiagonalOperator, TGaussian2DOperator to TGaussian2DDiagonalOperator, TInverseGaussian1DOperator to TInverseGaussian1DDiagonalOperator, TInverseGaussian2DOperator to TInverseGaussian2DDiagonalOperator.
+v0.3.13 - TAdditionOperator, TSubtractionOperator, TZeroOperator, TResizingOperator, TBlockOperator, TBlockSparseOperator, TBlockDiagonalOperator, TRowJointOperator, TColumnJointOperator, TJointOperator, TBlockTridiagonalOperator, TAdjointBlockOperator, TComplexProxyBlockOperator, TSeededOperator.
+        - Refactoring : Rename TMultOperator to TMultiplicationOperator.
+		- Refactoring : TProxyOperator and TProxyBlockOperator. 
+		- Add 'virtual bool isZero()' method in TOperator.
+		- Add 'virtual T sum()' method in TOperator.
+		- Add 'virtual T squaredNormFrobenius()' method in TOperator.
+		- Add 'virtual T mean()' method in TOperator.
+		- Add 'virtual T variance()' method in TOperator.
+		- Add 'virtual T standardDeviation()' method in TOperator.
+v0.3.14 - Add block-version to EMBP solver.
+		- Add 'virtual void applyBlockVariance(const arma::Col<T>& in, const arma::Col<T>& out)' method in TBlockOperator.
+		- Add 'virtual void applyBlockVarianceAdjoint(const arma::Col<T>& in, const arma::Col<T>& out)' method in TBlockOperator.
+        - TVarianceShadowOperator.	
+		- TGenericSeededOperator.
+v0.3.15 - Refactoring: TOperatorInLeastSquareOperator and TOperatorInConjugateGradientOperator to TProxyLinearOperator.		
+        - Refactoring: Rename TSeededOperator to TSeedingOperator.
+		- Refactoring: Rename TGenericSeededOperator to TGenericSeedingOperator.
+			
+----------------------------------------------------------------------------------------------------
+Version 0.4 - RELEASED June 2012
+----------------------------------------------------------------------------------------------------
+v0.4.1 - Use of KLab v0.4.1 (Porting to Mac OS X).
+v0.4.2 - Use of KLab v0.4.2 (Correction of minor issues)
